@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD System 2</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head text-center my-4">
+        <h2 class="text-uppercase fw-bold">crud</h2>
+        <p class="text-uppercase fw-bold fs-4">welcome crud system operation</p>
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="title" id="title" />
+        <div
+          class="price d-flex justify-content-between align-items-center flex-wrap"
+        >
+          <input
+            onkeyup="getTotle()"
+            type="number"
+            placeholder="Price"
+            id="price"
+          />
+          <input
+            onkeyup="getTotle()"
+            type="number"
+            placeholder="Taxes"
+            id="taxes"
+          />
+          <input
+            onkeyup="getTotle()"
+            type="number"
+            placeholder="ads"
+            id="ads"
+          />
+          <input
+            onkeyup="getTotle()"
+            type="number"
+            placeholder="discount"
+            id="discount"
+          />
+          <small id="totle"></small>
+        </div>
+        <input type="text" placeholder="Category" id="category" />
+        <input type="number" placeholder="Count" id="count" />
+        <button id="submit">Create</button>
+      </div>
+      <div class="output">
+        <div class="blockSearch">
+          <input
+            onkeyup="dataSearch(this.value)"
+            type="search"
+            placeholder="search"
+            id="search"
+          />
+          <div class="btnsearch d-flex justify-content-between">
+            <button onclick="getSearchMood(this.id)" id="searchtitle">
+              Search By Title
+            </button>
+            <button onclick="getSearchMood(this.id)" id="searchCategury">
+              Search By Categury
+            </button>
+          </div>
+        </div>
+        <div id="btnDelete"></div>
+        <table class="table text-center my-4 table-dark">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>totle</th>
+              <th>Category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+          </thead>
+          <tbody id="showData"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
