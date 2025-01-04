@@ -10,6 +10,7 @@ body {
 .crud {
   width: 80%;
   margin: auto;
+  overflow: auto;
 }
 input {
   width: 100%;
@@ -25,6 +26,11 @@ input {
 input:focus {
   background-color: #000;
   transform: scale(1.03);
+}
+@media (max-width: 767px){
+  input{
+    font-size:12px;
+  }
 }
 .price input {
   max-width: 20%;
@@ -56,6 +62,12 @@ button:hover {
 }
 .btnsearch button {
   width: 45%;
+  font-size:18px;
+}
+@media (max-width: 767px) {
+  .btnsearch button {
+    font-size:12px;
+  }
 }
 table th {
   text-transform: uppercase;
